@@ -12,9 +12,12 @@ with open('weights.pkl', 'rb') as mfile:
 def predict():
     data = request.json
     print("Received data:", data)
-    features = np.array(data['features']).reshape(1, -1)
+    weight = data['weight']
+    distance = data['distance']
+    loading_d = data['loading_meters']
+    features = np.array([[weight, loading_d, distance]])
     results = model.predict(features)
-    return jsonify({'predictions': results.tolist()})
+    return jsonify({'predictions': float(results[0])})
 
 
 if __name__ == '__main__':
