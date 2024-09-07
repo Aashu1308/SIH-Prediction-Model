@@ -6,4 +6,6 @@
 
 Parameters used for estimation: Source and Target coordinates (Latitude + Longitude), Weight and Loading Meters
 
-Flask App present for API calls. To be used at 127.0.0.1:5000, inside ExpressJS
+Flask App present for API calls. To be used at 127.0.0.1:5001, inside ExpressJS
+
+POST request should contain: Weight, Origin City and Destination City
