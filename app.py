@@ -39,7 +39,7 @@ def predict():
         loading_d = 0.000195  # data['loading_meters']
         features = np.array([[weight, loading_d, distance]])
         results = model.predict(features)
-        return jsonify({'predictions': float(results[0])})
+        return jsonify({'predictions': round(float(results[0]), 3)})
     except (ValueError, AttributeError) as e:
         return handle_400_error(e)
 
