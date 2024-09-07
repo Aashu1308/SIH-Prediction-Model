@@ -4,3 +4,4 @@ pandas
 matplotlib
 pickle
 flask
+geopy
